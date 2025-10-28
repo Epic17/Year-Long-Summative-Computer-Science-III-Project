@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif; margin: 2em; background: #f4f8fb;
+}
+
+h1 {
+    color: #2c3e50;
+}
+section {
+    margin-bottom: 2em;
+    background: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #e0e0e0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    margin: 0.5em 0;
+    cursor: pointer;
+    color: #2980b9;
+}
+li:hover {
+    text-decoration: underline;
+}
+label {
+    display: block;
+    margin: 0.5em 0;
+}
+button {
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background: #3498db;
+}
+#flight-details,
+#plan-result {
+    margin-top: 1em;
+}

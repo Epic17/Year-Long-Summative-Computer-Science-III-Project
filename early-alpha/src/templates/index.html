@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NeXGen Flight Dispatch</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>NeXGen Flight Dispatch</h1>
+    <section>
+        <h2>Flights</h2>
+        <ul id="flight-list"></ul>
+    </section>
+    <section>
+        <h2>Flight Details</h2>
+        <div id="flight-details">Select a flight to view details.</div>
+    </section>
+    <section>
+        <h2>Generate Flight Plan</h2>
+        <form id="plan-form">
+            <label>Origin: <input type="text" name="origin"></label>
+            <label>Destination: <input type="text" name="destination"></label>
+            <button type="submit">Generate</button>
+        </form>
+        <div id="plan-result"></div>
+    </section>
+    <section>
+        <h2>Generated Flight Plans</h2>
+        <ul id="flight-plan-list"></ul>
+    </section>
+    <script src="/static/app.js"></script>
+</body>
+</html>
