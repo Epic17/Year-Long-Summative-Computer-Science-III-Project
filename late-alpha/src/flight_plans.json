@@ -1,0 +1,16 @@
+[
+    {
+        "origin": "LAX",
+        "destination": "ORD",
+        "route": [
+            "LAX",
+            "OMA",
+            "ORD"
+        ],
+        "fuel_required": "17989.21 kg",
+        "weather": "Stormy",
+        "total_distance": 1514.48,
+        "straight_distance": 1512.88,
+        "aircraft_type": "Airbus A321neo"
+    }
+]

@@ -1,0 +1,244 @@
+[
+    {
+        "id": "EA751",
+        "origin": "MSP",
+        "destination": "IND",
+        "status": "En Route",
+        "location": {
+            "lat": 41.5512,
+            "lon": -88.753
+        },
+        "fuel": "56%",
+        "weather": "Clear",
+        "aircraft_type": "Boeing 787",
+        "fuel_required": "404.3 kg"
+    },
+    {
+        "id": "EA916",
+        "origin": "PIT",
+        "destination": "IND",
+        "status": "Scheduled",
+        "location": {
+            "lat": 40.4915,
+            "lon": -80.2327
+        },
+        "fuel": "80%",
+        "weather": "Rainy",
+        "aircraft_type": "Airbus A319neo",
+        "fuel_required": "261.29 kg"
+    },
+    {
+        "id": "EA106",
+        "origin": "ORD",
+        "destination": "PHX",
+        "status": "Scheduled",
+        "location": {
+            "lat": 41.9742,
+            "lon": -87.9073
+        },
+        "fuel": "57%",
+        "weather": "Clear",
+        "aircraft_type": "Boeing 767",
+        "fuel_required": "1156.53 kg"
+    },
+    {
+        "id": "EA533",
+        "origin": "BWI",
+        "destination": "SDF",
+        "status": "En Route",
+        "location": {
+            "lat": 38.4607,
+            "lon": -83.1429
+        },
+        "fuel": "33%",
+        "weather": "Rainy",
+        "aircraft_type": "Airbus A319neo",
+        "fuel_required": "397.33 kg",
+        "speed_knots": 406.7,
+        "time_remaining_hours": 0.3
+    },
+    {
+        "id": "EA144",
+        "origin": "ICT",
+        "destination": "SFO",
+        "status": "Scheduled",
+        "location": {
+            "lat": 37.6499,
+            "lon": -97.4331
+        },
+        "fuel": "95%",
+        "weather": "Clear",
+        "aircraft_type": "Airbus A320",
+        "fuel_required": "1094.9 kg"
+    },
+    {
+        "id": "EA347",
+        "origin": "CLT",
+        "destination": "PDX",
+        "status": "En Route",
+        "location": {
+            "lat": 39.3392,
+            "lon": -97.5055
+        },
+        "fuel": "54%",
+        "weather": "Cloudy",
+        "aircraft_type": "Airbus A350",
+        "fuel_required": "1832.2 kg",
+        "speed_knots": 471.7,
+        "time_remaining_hours": 2.5
+    },
+    {
+        "id": "EA148",
+        "origin": "CVG",
+        "destination": "DTW",
+        "status": "En Route",
+        "location": {
+            "lat": 40.1865,
+            "lon": -84.1951
+        },
+        "fuel": "30%",
+        "weather": "Rainy",
+        "aircraft_type": "Boeing 767",
+        "fuel_required": "184.42 kg"
+    },
+    {
+        "id": "EA312",
+        "origin": "DTW",
+        "destination": "DSM",
+        "status": "Scheduled",
+        "location": {
+            "lat": 42.2124,
+            "lon": -83.3534
+        },
+        "fuel": "70%",
+        "weather": "Rainy",
+        "aircraft_type": "Airbus A350",
+        "fuel_required": "428.21 kg"
+    },
+    {
+        "id": "EA483",
+        "origin": "ICT",
+        "destination": "MEM",
+        "status": "En Route",
+        "location": {
+            "lat": 37.2026,
+            "lon": -96.1546
+        },
+        "fuel": "82%",
+        "weather": "Rainy",
+        "aircraft_type": "Airbus A350",
+        "fuel_required": "363.78 kg"
+    },
+    {
+        "id": "EA181",
+        "origin": "LAS",
+        "destination": "LAX",
+        "status": "En Route",
+        "location": {
+            "lat": 35.2796,
+            "lon": -116.3761
+        },
+        "fuel": "48%",
+        "weather": "Rainy",
+        "aircraft_type": "Airbus A319neo",
+        "fuel_required": "190.07 kg"
+    },
+    {
+        "id": "EA237",
+        "origin": "HOU",
+        "destination": "IND",
+        "status": "Scheduled",
+        "location": {
+            "lat": 29.6454,
+            "lon": -95.2789
+        },
+        "fuel": "56%",
+        "weather": "Rainy",
+        "aircraft_type": "Airbus A321",
+        "fuel_required": "693.63 kg"
+    },
+    {
+        "id": "EA196",
+        "origin": "DTW",
+        "destination": "RDU",
+        "status": "Scheduled",
+        "location": {
+            "lat": 42.2124,
+            "lon": -83.3534
+        },
+        "fuel": "87%",
+        "weather": "Clear",
+        "aircraft_type": "Airbus A320",
+        "fuel_required": "403.47 kg"
+    },
+    {
+        "id": "EA785",
+        "origin": "MCI",
+        "destination": "SDF",
+        "status": "En Route",
+        "location": {
+            "lat": 38.3172,
+            "lon": -86.8773
+        },
+        "fuel": "67%",
+        "weather": "Cloudy",
+        "aircraft_type": "Airbus A320neo",
+        "fuel_required": "394.16 kg"
+    },
+    {
+        "id": "EA555",
+        "origin": "LAS",
+        "destination": "CLE",
+        "status": "Scheduled",
+        "location": {
+            "lat": 36.084,
+            "lon": -115.1537
+        },
+        "fuel": "96%",
+        "weather": "Clear",
+        "aircraft_type": "Boeing 737-800",
+        "fuel_required": "1464.49 kg"
+    },
+    {
+        "id": "EA272",
+        "origin": "JFK",
+        "destination": "DSM",
+        "status": "Scheduled",
+        "location": {
+            "lat": 40.6413,
+            "lon": -73.7781
+        },
+        "fuel": "81%",
+        "weather": "Clear",
+        "aircraft_type": "Boeing 737 MAX-9",
+        "fuel_required": "832.9 kg"
+    },
+    {
+        "id": "EA9611",
+        "origin": "LAX",
+        "destination": "ORD",
+        "status": "Scheduled",
+        "fuel": "90%",
+        "weather": "Cloudy",
+        "aircraft_type": "Airbus A321neo",
+        "location": {
+            "lat": 33.9425,
+            "lon": -118.4081
+        },
+        "fuel_required": "17989.21 kg",
+        "plan_id": 0
+    },
+    {
+        "id": "EA7900",
+        "origin": "DFW",
+        "destination": "EWR",
+        "status": "Scheduled",
+        "fuel": "67%",
+        "weather": "Cloudy",
+        "aircraft_type": "Airbus A320neo",
+        "location": {
+            "lat": 32.8998,
+            "lon": -97.0403
+        }
+    }
+]
