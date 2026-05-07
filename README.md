@@ -29,7 +29,6 @@ This release includes the following key changes:
 
 ```
 release/
-├── README.md                    # This file
 ├── requirements.txt             # Python dependencies
 ├── data_model.md                # Data structure documentation
 ├── flights.json                 # Stored flight data
