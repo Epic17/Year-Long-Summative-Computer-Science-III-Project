@@ -20,6 +20,7 @@ function loadFlights() {
         });
 }
 
+// Show flight details
 function showFlightDetails(flightId) {
     fetch(`/flight/${flightId}`)
         .then(res => res.json())
@@ -30,20 +31,38 @@ function showFlightDetails(flightId) {
                 document.getElementById('flight-details').textContent = flight.error;
             } else {
                 let fuel_display = flight.fuel;
-                if (flight.fuel_required) {
+                
+                // Calculate fuel in lbs from capacity and percentage
+                if (flight.fuel_capacity_kg) {
                     const fuel_percent = parseInt(flight.fuel) / 100;
-                    const fuel_required_kg = parseFloat(flight.fuel_required.split(' ')[0]);
-                    const fuel_remaining_kg = fuel_percent * fuel_required_kg;
-                    const fuel_remaining_lbs = Math.round(fuel_remaining_kg * 2.20462);
-                    const fuel_required_lbs = Math.round(fuel_required_kg * 2.20462);
-                    fuel_display += ` (${fuel_remaining_lbs}/${fuel_required_lbs} lbs)`;
+                    const fuel_capacity_lbs = Math.round(flight.fuel_capacity_kg * 2.20462);
+                    const fuel_remaining_lbs = Math.round(fuel_capacity_lbs * fuel_percent);
+                    const formatted_remaining = fuel_remaining_lbs.toLocaleString();
+                    const formatted_capacity = fuel_capacity_lbs.toLocaleString();
+                    fuel_display += ` (${formatted_remaining}/${formatted_capacity} lbs)`;
                 }
+                
+                // Format origin and destination with city names
+                const originDisplay = `${flight.origin} - ${flight.origin_city}`;
+                const destinationDisplay = `${flight.destination} - ${flight.destination_city}`;
+                
+                // Create Google Maps link
+                const mapsUrl = `https://www.google.com/maps?q=${flight.location.lat},${flight.location.lon}&z=10`;
+                const mapsButton = `<a href="${mapsUrl}" target="_blank" style="margin-left: 10px; padding: 5px 10px; background-color: #4285F4; color: white; text-decoration: none; border-radius: 3px; font-size: 12px;">Open in Maps</a>`;
+                
+                // Format nearest airport info - only for en-route flights
+                let nearestAirportDisplay = '';
+                if (flight.status === 'En Route' && flight.nearest_airport) {
+                    nearestAirportDisplay = `<strong>Nearest Airport:</strong> ${flight.nearest_airport} (${flight.nearest_airport_distance} nm away)<br>`;
+                }
+                
                 let details = `
                     <strong>ID:</strong> ${flight.id}<br>
-                    <strong>Origin:</strong> ${flight.origin}<br>
-                    <strong>Destination:</strong> ${flight.destination}<br>
+                    <strong>From:</strong> ${originDisplay}<br>
+                    <strong>To:</strong> ${destinationDisplay}<br>
                     <strong>Status:</strong> ${flight.status}<br>
-                    <strong>Location:</strong> Lat ${flight.location.lat}, Lon ${flight.location.lon}<br>
+                    <strong>Location:</strong> Lat ${flight.location.lat}, Lon ${flight.location.lon} ${mapsButton}<br>
+                    ${nearestAirportDisplay}
                     <strong>Fuel:</strong> ${fuel_display}<br>
                     <strong>Weather:</strong> ${flight.weather}<br>
                     <strong>Aircraft Type:</strong> ${flight.aircraft_type}
@@ -56,7 +75,8 @@ function showFlightDetails(flightId) {
                 }
                 if (flight.speed_knots) {
                     details += `<br><strong>Speed:</strong> ${flight.speed_knots} knots<br>
-                    <strong>Time Remaining:</strong> ${flight.time_remaining_hours} hours`;
+                    <strong>Distance Remaining:</strong> ${flight.distance_remaining_nm} nm<br>
+                    <strong>Time Remaining:</strong> ${flight.time_remaining_display}`;
                 }
                 document.getElementById('flight-details').innerHTML = details;
             }
@@ -95,8 +115,6 @@ addFlightForm.onsubmit = function(e) {
         loadFlightPlans();
     });
 };
-
-
 
 // Fetch and display generated flight plans
 function loadFlightPlans() {
